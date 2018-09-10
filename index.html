@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script src="./scripts/script.js"></script>
-        <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
-    </head>
+ <!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
 
-    <body>
-        <button onclick="popMessage()">Click Me!</button>
-    </body>
-</html>
+<div ng-app="">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+</div>
+
+</body>
+</html> 
