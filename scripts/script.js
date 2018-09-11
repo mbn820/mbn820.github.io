@@ -8,7 +8,7 @@ function convert() {
                        .map(s => convertToSchemaFormat(s))
                        .join("\n");
 
-    document.getElementById("targetOutput").value = output;
+    document.getElementById("targetOutput").value = removeLastComma(output);
 }
 
 function extractFirstWord(str) {
@@ -20,4 +20,10 @@ function convertToSchemaFormat(str) {
     '  "name": "' + str + '",' + '\n' +
     '  "type": [ "null", "string" ]' + '\n' +
     '},';
+}
+
+function removeLastComma(str) {
+    if (str.charAt( str.length - 1) == ",") {
+        return str.slice(0, -1);
+    }
 }
