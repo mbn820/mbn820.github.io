@@ -27,3 +27,12 @@ function removeLastComma(str) {
         return str.slice(0, -1);
     }
 }
+
+function copyOutput() {
+    document.getElementById("targetOutput").select();
+    document.execCommand("copy");
+}
+
+function clearSource() {
+    document.getElementById("sourceInput").value = "";
+}
